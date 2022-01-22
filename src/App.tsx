@@ -1,26 +1,42 @@
+/**
+* date: 2022-01-22, Sat, 23:4
+* author: TooZhun9
+* feature： Main Entry With Route
+*/
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, Routes, Route,} from "react-router-dom"
+
+
 import './App.css';
 
+import routes, {RouteType} from "./common/routes";
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                {
+                    routes.map((route: RouteType) => {
+                        return route.paths.map(path => {
+                                return (<Route path={path}
+                                               key={path}
+                                               element={
+                                                   (() => {
+                                                       return <route.component/>
+                                                   })()
+                                               }
+                                    >
+                                    </Route>
+                                )
+                            }
+                        )
+
+
+                    })
+                }
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

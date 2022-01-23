@@ -4,5 +4,12 @@
 * feature： Redux State type for using
 */
 export type ScoreStateType ={
-    scores:number[] ;   // todo： 先简单完成 store 搭建
+    connected: boolean,
+    scoreDetails:scoreDetail[] ;
+}
+
+export type scoreDetail ={
+    name: string;
+    score: number;
+    id:string;
 }

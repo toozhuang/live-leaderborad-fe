@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="343e4fb6-99a5-4c6a-b526-0a08773ba4a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/context/action.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/context.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/dto/action.type.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/dto/state.type.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/reducer.tsx" afterDir="false" />
+    <list default="true" id="343e4fb6-99a5-4c6a-b526-0a08773ba4a6" name="Changes" comment="feat: websocket initial; fully workflow worked;">
+      <change afterPath="$PROJECT_DIR$/src/components/playerBoard/dto/playerscore.type.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playerBoard/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/playerBoard/playerboard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/score/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/score/scorepage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/socket/socket.context.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/socket/useSocket.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/action.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/action.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/dto/action.type.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/dto/action.type.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/dto/state.type.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/dto/state.type.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +63,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -53,6 +73,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/socket" />
+      <recent name="$PROJECT_DIR$/src/components/playerBoard/dto" />
       <recent name="$PROJECT_DIR$/src/common" />
     </key>
   </component>
@@ -70,7 +92,7 @@
       <workItem from="1642859942593" duration="17000" />
       <workItem from="1642859975467" duration="107000" />
       <workItem from="1642860094964" duration="103000" />
-      <workItem from="1642860205506" duration="5117000" />
+      <workItem from="1642860205506" duration="24616000" />
     </task>
     <task id="LOCAL-00001" summary="init: project init">
       <created>1642860254041</created>
@@ -86,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642863942615</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: simple base redux workflow init">
+      <created>1642916455733</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642916455733</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,7 +125,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init: project init" />
     <MESSAGE value="feat: Main Entry set, route configured" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Main Entry set, route configured" />
+    <MESSAGE value="feat: simple base redux workflow init" />
+    <MESSAGE value="feat: websocket initial; fully workflow worked;" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: websocket initial; fully workflow worked;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

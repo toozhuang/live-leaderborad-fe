@@ -1,0 +1,19 @@
+.player-score-container{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 40px;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.player-score-container:last-child{
+    border-bottom: none;
+}

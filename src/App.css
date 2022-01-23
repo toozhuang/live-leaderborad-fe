@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
 
 .App-logo {

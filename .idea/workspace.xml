@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="343e4fb6-99a5-4c6a-b526-0a08773ba4a6" name="Changes" comment="feat: websocket initial; fully workflow worked;">
+    <list default="true" id="343e4fb6-99a5-4c6a-b526-0a08773ba4a6" name="Changes" comment="refactor: project refactor">
+      <change afterPath="$PROJECT_DIR$/src/context/dto/socket.type.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playerBoard/dto/playerscore.type.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/playerBoard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playerBoard/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/action.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/action.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/dto/action.type.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/dto/action.type.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/dto/state.type.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/dto/state.type.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/action.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/redux/action.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/redux/context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/redux/reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/socket/socket.context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/socket/socket.context.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/score/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/score/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/socket/socket.context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/socket/socket.context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/socket/useSocket.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/socket/useSocket.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +67,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/context/redux" />
       <recent name="$PROJECT_DIR$/src/context" />
       <recent name="$PROJECT_DIR$/src/socket" />
       <recent name="$PROJECT_DIR$/src/components/playerBoard/dto" />
@@ -89,7 +89,7 @@
       <workItem from="1642859975467" duration="107000" />
       <workItem from="1642860094964" duration="103000" />
       <workItem from="1642860205506" duration="24616000" />
-      <workItem from="1642988841180" duration="2138000" />
+      <workItem from="1642988841180" duration="11895000" />
     </task>
     <task id="LOCAL-00001" summary="init: project init">
       <created>1642860254041</created>
@@ -112,7 +112,35 @@
       <option name="project" value="LOCAL" />
       <updated>1642916455733</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: support connect/disconnect status change workflow">
+      <created>1642991496432</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642991496432</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor: project refactor">
+      <created>1642991549488</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642991549488</updated>
+    </task>
+    <task id="LOCAL-00006" summary="doc: readme update">
+      <created>1642992787428</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642992787428</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test: unit test for redux workflow">
+      <created>1643000589909</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1643000589909</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +152,11 @@
     <MESSAGE value="feat: Main Entry set, route configured" />
     <MESSAGE value="feat: simple base redux workflow init" />
     <MESSAGE value="feat: websocket initial; fully workflow worked;" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: websocket initial; fully workflow worked;" />
+    <MESSAGE value="feat: support connect/disconnect status change workflow" />
+    <MESSAGE value="refactor: project refactor" />
+    <MESSAGE value="doc: readme update" />
+    <MESSAGE value="test: unit test for redux workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: unit test for redux workflow" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -8,7 +8,7 @@ import React from 'react'
 import BaseLayout from "../components/layout";
 import ScorePage from "../pages/score";
 
-import {ScoreProvider} from "../context/context";
+import {ScoreProvider} from "../context/redux/context";
 
 
 export type RouteType = {

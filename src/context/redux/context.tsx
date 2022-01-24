@@ -6,8 +6,8 @@
 import React, {Dispatch, useReducer} from 'react'
 import {scoreInitialState, scoreReducer} from "./reducer";
 
-import {ScoreAction} from "./dto/action.type";
-import {ScoreState} from "./dto/state.type";
+import {ScoreAction} from "../dto/action.type";
+import {ScoreState} from "../dto/state.type";
 
 // define Component Scope State
 const ScoreContext = React.createContext(scoreInitialState)

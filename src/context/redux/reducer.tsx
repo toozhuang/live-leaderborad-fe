@@ -5,8 +5,8 @@
  */
 import {isEqual} from 'lodash-es'
 
-import {ScoreDetail, ScoreState} from "./dto/state.type";
-import {SCORE_COMMAND, ScoreAction} from "./dto/action.type";
+import {ScoreDetail, ScoreState} from "../dto/state.type";
+import {SCORE_COMMAND, ScoreAction} from "../dto/action.type";
 
 export const scoreInitialState: ScoreState = {
     connected: false,
@@ -19,7 +19,7 @@ export const scoreInitialState: ScoreState = {
  * @param previousScoreList
  * @param latestScoreList
  */
-export function isScoreListChanged(previousScoreList: ScoreDetail[], latestScoreList: ScoreDetail[]) {
+function isScoreListChanged(previousScoreList: ScoreDetail[], latestScoreList: ScoreDetail[]) {
     return !isEqual(previousScoreList, latestScoreList);
 }
 

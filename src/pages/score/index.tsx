@@ -8,9 +8,9 @@ import React, { useCallback, useEffect} from "react";
 import {Spin} from "antd";
 
 import PlayerBoard from "../../components/playerBoard";
-import {useScoreDispatch, useScoreState} from "../../context/context";
+import {useScoreDispatch, useScoreState} from "../../context/redux/context";
 import {useSocket} from "../../context/socket/useSocket";
-import {socketConnected, updateScores,socketDisConnected} from "../../context/action";
+import {socketConnected, updateScores,socketDisConnected} from "../../context/redux/action";
 
 
 import {ScoreDetail} from "../../context/dto/state.type";
@@ -55,7 +55,7 @@ const ScorePage = () => {
     return <div className="score-container">
         <h2>Live Score Board</h2>
         {
-            !connected && <Spin size="large"/>
+            !connected && <Spin size="large" spinning={!connected}/>
         }
         {
             connected && scoreDetails.length > 0 && scoreDetails.map(item => {

@@ -5,8 +5,8 @@
  */
 import {Dispatch} from "react";
 
-import {SCORE_COMMAND, ScoreAction} from "./dto/action.type";
-import {ScoreDetail} from "./dto/state.type";
+import {SCORE_COMMAND, ScoreAction} from "../dto/action.type";
+import {ScoreDetail} from "../dto/state.type";
 
 export function updateScores(dispatch: Dispatch<ScoreAction>, updatePayload: ScoreDetail[]) {
     dispatch({type: SCORE_COMMAND.SCORE_UPDATE_SUCCESS, payload: updatePayload})

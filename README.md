@@ -6,7 +6,7 @@ Leader Board webSite, Single page application using react, react-router, redux a
 The project builds with create-react-app from sketch. Adding eslint and prettier to format the code.
 
 ## Project Structure
-###Client
+### Client
 - pages
   - score page
 - components

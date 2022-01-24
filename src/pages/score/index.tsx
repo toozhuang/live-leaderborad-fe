@@ -7,7 +7,7 @@
 import React, { useEffect } from 'react';
 import { Spin } from 'antd';
 
-import PlayerBoard from '../../components/playerBoard';
+import PlayerBoard from '../../components/playerboard';
 import { useScoreDispatch, useScoreState } from '../../context/redux/context';
 import { useSocket } from '../../context/socket/useSocket';
 import {

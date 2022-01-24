@@ -5,14 +5,16 @@
  */
 
 import React, { useCallback, useEffect} from "react";
+import {Spin} from "antd";
+
 import PlayerBoard from "../../components/playerBoard";
 import {useScoreDispatch, useScoreState} from "../../context/context";
-import {useSocket} from "../../socket/useSocket";
-import {socketConnected, updateScores} from "../../context/action";
+import {useSocket} from "../../context/socket/useSocket";
+import {socketConnected, updateScores,socketDisConnected} from "../../context/action";
 
+
+import {ScoreDetail} from "../../context/dto/state.type";
 import './scorepage.scss'
-import {PlayerScoreType} from "../../components/playerBoard/dto/playerscore.type";
-import {Spin} from "antd";
 
 
 const ScorePage = () => {
@@ -21,7 +23,7 @@ const ScorePage = () => {
     const dispatch = useScoreDispatch()
     const {connected, scoreDetails} = store;
 
-    const refreshScore = useCallback((event: { scores: PlayerScoreType[] }) => {
+    const refreshScore = useCallback((event: { scores: ScoreDetail[] }) => {
         const {scores} = event
         updateScores(dispatch, scores)
     }, [dispatch])
@@ -29,12 +31,19 @@ const ScorePage = () => {
 
     useEffect(() => {
         const onConnected = () => {
-            console.log('connected')
             socketConnected(dispatch)
         }
 
+        const onDisconnected = () => {
+            socketDisConnected(dispatch)
+        }
+
         socket.addEventListener('connect', onConnected)
+
         socket.addEventListener('scores', refreshScore)
+
+        socket.on('disconnect',onDisconnected)
+
         return () => {
             socket.removeEventListener('scores', refreshScore)
             socket.removeEventListener('connect')
@@ -42,7 +51,6 @@ const ScorePage = () => {
 
     }, [dispatch, refreshScore, socket])
 
-    console.log('render:')
 
     return <div className="score-container">
         <h2>Live Score Board</h2>

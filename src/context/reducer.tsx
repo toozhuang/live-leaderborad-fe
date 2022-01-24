@@ -5,10 +5,10 @@
  */
 import {isEqual} from 'lodash-es'
 
-import {scoreDetail, ScoreStateType} from "./dto/state.type";
-import {SCORE_COMMAND, ScoreActionType,} from "./dto/action.type";
+import {ScoreDetail, ScoreState} from "./dto/state.type";
+import {SCORE_COMMAND, ScoreAction} from "./dto/action.type";
 
-export const scoreInitialState: ScoreStateType = {
+export const scoreInitialState: ScoreState = {
     connected: false,
     scoreDetails: []
 }
@@ -19,11 +19,11 @@ export const scoreInitialState: ScoreStateType = {
  * @param previousScoreList
  * @param latestScoreList
  */
-export function isScoreListChanged(previousScoreList:scoreDetail[], latestScoreList: scoreDetail[]) {
+export function isScoreListChanged(previousScoreList: ScoreDetail[], latestScoreList: ScoreDetail[]) {
     return !isEqual(previousScoreList, latestScoreList);
 }
 
-export const scoreReducer = (previousState: ScoreStateType, acton: ScoreActionType): ScoreStateType => {
+export const scoreReducer = (previousState: ScoreState, acton: ScoreAction): ScoreState => {
     switch (acton.type) {
         case SCORE_COMMAND.SCORE_SERVER_CONNECTED: {
             return {
@@ -37,7 +37,7 @@ export const scoreReducer = (previousState: ScoreStateType, acton: ScoreActionTy
                 if (isScoreListChanged(previousState.scoreDetails, acton.payload)) {
                     return {
                         ...previousState,
-                        scoreDetails:acton.payload?acton.payload:[]
+                        scoreDetails: acton.payload ? acton.payload : []
                     }
                 } else {
                     return previousState
@@ -48,6 +48,10 @@ export const scoreReducer = (previousState: ScoreStateType, acton: ScoreActionTy
 
         }
         case SCORE_COMMAND.SCORE_SERVER_DISCONNECTED:
+            return {
+                ...previousState,
+                connected: false
+            }
         default: {
             return previousState;
         }

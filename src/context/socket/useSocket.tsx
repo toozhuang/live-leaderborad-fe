@@ -4,14 +4,14 @@
  * feature： generate a socket hook for global use
  */
 
-import { useContext } from "react";
-import {SocketContext} from "./socket.context";
+import { useContext } from 'react';
+import { SocketContext } from './socket.context';
 
 export const useSocket = () => {
-    const socket = useContext(SocketContext)
+    const socket = useContext(SocketContext);
 
     if (socket === undefined) {
-        throw new Error('useSocket must Be used inside Socket Provider')
+        throw new Error('useSocket must Be used inside Socket Provider');
     }
-    return socket
-}
+    return socket;
+};

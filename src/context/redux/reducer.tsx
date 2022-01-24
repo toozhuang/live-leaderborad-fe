@@ -3,15 +3,15 @@
  * author: TooZhun9
  * feature： Store reducer including store state and reducer logic
  */
-import {isEqual} from 'lodash-es'
+import { isEqual } from 'lodash-es';
 
-import {ScoreDetail, ScoreState} from "../dto/state.type";
-import {SCORE_COMMAND, ScoreAction} from "../dto/action.type";
+import { ScoreDetail, ScoreState } from '../dto/state.type';
+import { SCORE_COMMAND, ScoreAction } from '../dto/action.type';
 
 export const scoreInitialState: ScoreState = {
     connected: false,
-    scoreDetails: []
-}
+    scoreDetails: [],
+};
 
 /**
  * decide if the score list changed
@@ -19,41 +19,50 @@ export const scoreInitialState: ScoreState = {
  * @param previousScoreList
  * @param latestScoreList
  */
-function isScoreListChanged(previousScoreList: ScoreDetail[], latestScoreList: ScoreDetail[]) {
+function isScoreListChanged(
+    previousScoreList: ScoreDetail[],
+    latestScoreList: ScoreDetail[]
+) {
     return !isEqual(previousScoreList, latestScoreList);
 }
 
-export const scoreReducer = (previousState: ScoreState, acton: ScoreAction): ScoreState => {
+export const scoreReducer = (
+    previousState: ScoreState,
+    acton: ScoreAction
+): ScoreState => {
     switch (acton.type) {
         case SCORE_COMMAND.SCORE_SERVER_CONNECTED: {
             return {
                 ...previousState,
-                connected: true
-            }
+                connected: true,
+            };
         }
         case SCORE_COMMAND.SCORE_UPDATE_SUCCESS: {
-
             if (acton.payload) {
-                if (isScoreListChanged(previousState.scoreDetails, acton.payload)) {
+                if (
+                    isScoreListChanged(
+                        previousState.scoreDetails,
+                        acton.payload
+                    )
+                ) {
                     return {
                         ...previousState,
-                        scoreDetails: acton.payload ? acton.payload : []
-                    }
+                        scoreDetails: acton.payload ? acton.payload : [],
+                    };
                 } else {
-                    return previousState
+                    return previousState;
                 }
             } else {
-                return previousState
+                return previousState;
             }
-
         }
         case SCORE_COMMAND.SCORE_SERVER_DISCONNECTED:
             return {
                 ...previousState,
-                connected: false
-            }
+                connected: false,
+            };
         default: {
             return previousState;
         }
     }
-}
+};

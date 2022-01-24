@@ -13,6 +13,7 @@
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
     "antd": "^4.18.4",
+    "eslint-plugin-prettier": "^4.0.0",
     "lodash-es": "^4.17.21",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
@@ -38,12 +39,6 @@
       "^lodash-es$": "lodash"
     }
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -55,5 +50,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.28.0",
+    "prettier": "^2.5.1"
   }
 }

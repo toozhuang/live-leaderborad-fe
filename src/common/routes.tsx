@@ -3,33 +3,31 @@
  * author: TooZhun9
  * feature： 路由配置； Router Config
  */
-import React from 'react'
+import React from 'react';
 
-import BaseLayout from "../components/layout";
-import ScorePage from "../pages/score";
+import BaseLayout from '../components/layout';
+import ScorePage from '../pages/score';
 
-import {ScoreProvider} from "../context/redux/context";
-
+import { ScoreProvider } from '../context/redux/context';
 
 export type RouteType = {
-    paths: string[],
-    component: () => JSX.Element,
-    isPrivate: boolean
-}
+    paths: string[];
+    component: () => JSX.Element;
+    isPrivate: boolean;
+};
 
 const routes: RouteType[] = [
     {
         paths: ['/', '/scores'],
-        component: () =>
+        component: () => (
             <BaseLayout>
                 <ScoreProvider>
-                    <ScorePage/>
+                    <ScorePage />
                 </ScoreProvider>
             </BaseLayout>
-        ,
-        isPrivate: true
+        ),
+        isPrivate: true,
     },
+];
 
-]
-
-export default routes
+export default routes;

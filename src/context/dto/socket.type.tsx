@@ -1,5 +1,5 @@
-import {ReactChild} from "react";
+import { ReactChild } from 'react';
 
-export type ISocketProvider ={
+export type ISocketProvider = {
     children: ReactChild;
-}
+};

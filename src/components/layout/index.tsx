@@ -3,68 +3,67 @@
  * author: TooZhun9
  * feature： layout Component, base layout of the app
  */
-import {Breadcrumb, Layout, Menu} from "antd";
-import React, {useCallback, useState} from "react";
-import { FileOutlined} from "@ant-design/icons";
-import {useLocation} from "react-router";
+import { Breadcrumb, Layout, Menu } from 'antd';
+import React, { useCallback, useState } from 'react';
+import { FileOutlined } from '@ant-design/icons';
+import { useLocation } from 'react-router';
 
-const menus = [{
-    id: 1,
-    name: 'Live Scores',
-    path: '/scores',
-    icon: <FileOutlined/>
-}
-]
+const menus = [
+    {
+        id: 1,
+        name: 'Live Scores',
+        path: '/scores',
+        icon: <FileOutlined />,
+    },
+];
 
-const {Content, Footer, Sider} = Layout;
+const { Content, Footer, Sider } = Layout;
 
+const ContentPage = ({ children }: { children?: JSX.Element }) => {
+    const [collapsed, onCollapse] = useState(false);
 
-const ContentPage = ({children}: { children?: JSX.Element }) => {
+    const { pathname: PATH_NAME } = useLocation();
 
-    const [collapsed, onCollapse] = useState(false)
+    const name = useCallback((path) => {
+        return menus.filter((item) => item.path === path || path === '/')[0];
+    }, []);
 
-    const {pathname: PATH_NAME} = useLocation()
-
-    const name = useCallback(
-        (path) => {
-
-            return menus.filter(item => item.path === path || path === '/')[0]
-        }, []
-    )
-
-
-    return (<Layout style={{minHeight: '100vh'}}>
+    return (
+        <Layout style={{ minHeight: '100vh' }}>
             <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
-                <div className="logo"/>
+                <div className="logo" />
                 <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                    {
-                        menus.map(item => {
-                            return (<Menu.Item key={'' + item.id} icon={item.icon}>
+                    {menus.map((item) => {
+                        return (
+                            <Menu.Item key={'' + item.id} icon={item.icon}>
                                 {item.name}
-                            </Menu.Item>)
-                        })
-                    }
+                            </Menu.Item>
+                        );
+                    })}
                 </Menu>
             </Sider>
             <Layout className="site-layout">
-                <Content style={{margin: '0 16px'}}>
-                    <Breadcrumb style={{margin: '16px 0'}}>
-                        <Breadcrumb.Item>{name(PATH_NAME).name}</Breadcrumb.Item>
+                <Content style={{ margin: '0 16px' }}>
+                    <Breadcrumb style={{ margin: '16px 0' }}>
+                        <Breadcrumb.Item>
+                            {name(PATH_NAME).name}
+                        </Breadcrumb.Item>
                     </Breadcrumb>
-                    <div className="site-layout-background" style={{padding: 24, minHeight: 360}}>
+                    <div
+                        className="site-layout-background"
+                        style={{ padding: 24, minHeight: 360 }}
+                    >
                         <div className="App">
-                            <div className='container'>
-                                {children}
-                            </div>
+                            <div className="container">{children}</div>
                         </div>
                     </div>
                 </Content>
-                <Footer style={{textAlign: 'center'}}>Leader Board Scores 2022</Footer>
+                <Footer style={{ textAlign: 'center' }}>
+                    Leader Board Scores 2022
+                </Footer>
             </Layout>
         </Layout>
-    )
+    );
+};
 
-}
-
-export default ContentPage
-
+export default ContentPage;

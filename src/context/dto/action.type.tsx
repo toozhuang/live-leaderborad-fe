@@ -5,7 +5,7 @@
  */
 
 
-import {scoreDetail} from "./state.type";
+import {ScoreDetail} from "./state.type";
 
 export enum SCORE_COMMAND {
     SCORE_SERVER_CONNECTED = 'SCORE_SERVER_CONNECTED',
@@ -14,11 +14,11 @@ export enum SCORE_COMMAND {
 
 }
 
-export type ScoreCommandType = | 'SCORE_SERVER_CONNECTED' | 'SCORE_UPDATE_SUCCESS' | 'SCORE_SERVER_DISCONNECTED'
+export type ScoreCommand = | 'SCORE_SERVER_CONNECTED' | 'SCORE_UPDATE_SUCCESS' | 'SCORE_SERVER_DISCONNECTED'
 
 
-export type ScoreActionType = {
-    type: ScoreCommandType,
-    payload?: scoreDetail[] ,
+export type ScoreAction = {
+    type: ScoreCommand,
+    payload?: ScoreDetail[] ,
 }
 

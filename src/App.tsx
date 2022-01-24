@@ -10,7 +10,7 @@ import {BrowserRouter, Routes, Route,} from "react-router-dom"
 import './App.css';
 
 import routes, {RouteType} from "./common/routes";
-import {SocketProvider} from "./socket/socket.context";
+import {SocketProvider} from "./context/socket/socket.context";
 
 function App() {
     return (

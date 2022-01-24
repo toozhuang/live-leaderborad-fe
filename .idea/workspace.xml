@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="343e4fb6-99a5-4c6a-b526-0a08773ba4a6" name="Changes" comment="feat: websocket initial; fully workflow worked;">
-      <change afterPath="$PROJECT_DIR$/src/components/playerBoard/dto/playerscore.type.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/playerBoard/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/playerBoard/playerboard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/score/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/score/scorepage.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/socket/socket.context.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/socket/useSocket.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playerBoard/dto/playerscore.type.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/playerBoard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/playerBoard/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/action.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/action.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/context.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/dto/action.type.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/dto/action.type.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/dto/state.type.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/dto/state.type.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/score/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/score/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/socket/socket.context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/socket/socket.context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/socket/useSocket.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/socket/useSocket.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +68,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/context" />
       <recent name="$PROJECT_DIR$/src/socket" />
       <recent name="$PROJECT_DIR$/src/components/playerBoard/dto" />
       <recent name="$PROJECT_DIR$/src/common" />
@@ -93,6 +89,7 @@
       <workItem from="1642859975467" duration="107000" />
       <workItem from="1642860094964" duration="103000" />
       <workItem from="1642860205506" duration="24616000" />
+      <workItem from="1642988841180" duration="2138000" />
     </task>
     <task id="LOCAL-00001" summary="init: project init">
       <created>1642860254041</created>

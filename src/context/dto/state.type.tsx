@@ -3,12 +3,12 @@
 * author: TooZhun9
 * feature： Redux State type for using
 */
-export type ScoreStateType ={
+export type ScoreState ={
     connected: boolean,
-    scoreDetails:scoreDetail[] ;
+    scoreDetails:ScoreDetail[] ;
 }
 
-export type scoreDetail ={
+export type ScoreDetail ={
     name: string;
     score: number;
     id:string;

@@ -5,11 +5,12 @@
  */
 
 import React from "react";
-import {PlayerScoreType} from "./dto/playerscore.type";
+
+import {ScoreDetail} from "../../context/dto/state.type";
 
 import './playerboard.scss'
 
-const PlayerBoard = (inProps: { playScoreDetail: PlayerScoreType }) => {
+const PlayerBoard = (inProps: { playScoreDetail: ScoreDetail }) => {
     const {playScoreDetail} = inProps;
     return <div className="player-score-container">
         <span>

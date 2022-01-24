@@ -6,8 +6,9 @@
 import React from 'react'
 
 import BaseLayout from "../components/layout";
-import {ScoreProvider} from "../context/context";
 import ScorePage from "../pages/score";
+
+import {ScoreProvider} from "../context/context";
 
 
 export type RouteType = {

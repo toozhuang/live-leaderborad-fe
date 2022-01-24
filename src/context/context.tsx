@@ -5,18 +5,19 @@
  */
 import React, {Dispatch, useReducer} from 'react'
 import {scoreInitialState, scoreReducer} from "./reducer";
-import {ScoreActionType} from "./dto/action.type";
-import {ScoreStateType} from "./dto/state.type";
+
+import {ScoreAction} from "./dto/action.type";
+import {ScoreState} from "./dto/state.type";
 
 // define Component Scope State
 const ScoreContext = React.createContext(scoreInitialState)
-const ScoreDispatchContext = React.createContext((action:ScoreActionType) => console.error("Dispatched action outside of an AuthContext provider", action))
+const ScoreDispatchContext = React.createContext((action:ScoreAction) => console.error("Dispatched action outside of an AuthContext provider", action))
 
 // define Component Score
 /**
  * return the score store from redux store
  */
-export function useScoreState(): ScoreStateType {
+export function useScoreState(): ScoreState {
     const context = React.useContext(ScoreContext)
     if (context === undefined) {
         throw new Error('useScoreState must Be used inside ScoreContext Provider')
@@ -24,7 +25,7 @@ export function useScoreState(): ScoreStateType {
     return context
 }
 
-export function useScoreDispatch():Dispatch<ScoreActionType>{
+export function useScoreDispatch():Dispatch<ScoreAction>{
     const context = React.useContext(ScoreDispatchContext)
     if (context === undefined) {
         throw new Error('useScoreState must Be used inside ScoreContext Provider')
@@ -40,7 +41,7 @@ export function useScoreDispatch():Dispatch<ScoreActionType>{
  * @constructor
  */
 export const ScoreProvider = ({children}: { children: JSX.Element }) => {
-    const [scoreStore, dispatch]:[ScoreStateType,Dispatch<ScoreActionType>] = useReducer(scoreReducer, scoreInitialState)
+    const [scoreStore, dispatch]:[ScoreState,Dispatch<ScoreAction>] = useReducer(scoreReducer, scoreInitialState)
 
     return (
         <ScoreContext.Provider value={scoreStore}>
